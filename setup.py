@@ -5,7 +5,7 @@ setup(
     name='django-bs4',
     description='simple bootstrap4 support for django',
     long_description=open('README.rst').read(),
-    version='0.0.1',
+    version='0.0.2',
     license='MIT',
     packages=find_packages(),
     include_package_data=True,

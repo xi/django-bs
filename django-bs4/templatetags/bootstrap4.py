@@ -43,7 +43,13 @@ def bootstrap_url_replace_param(url, key, value):
 
 
 @register.inclusion_tag('bs4/field.html')
-def bootstrap_field(boundfield):
+def bootstrap_field(
+    boundfield,
+    addon_before=None,
+    addon_after=None,
+    show_label=True,
+    form_group_class='form-group',
+):
     widget = boundfield.field.widget
     return {
         'field': boundfield,
@@ -51,6 +57,10 @@ def bootstrap_field(boundfield):
             getattr(widget, 'input_type', None) in ['checkbox', 'radio']
             and not getattr(widget, 'option_template_name', None)
         ),
+        'addon_before': addon_before,
+        'addon_after': addon_after,
+        'show_label': show_label,
+        'form_group_class': form_group_class,
     }
 
 
@@ -67,7 +77,14 @@ def bootstrap_messages(context):
 
 
 @register.inclusion_tag('bs4/pagination.html', takes_context=True)
-def bootstrap_pagination(context, page, pages_to_show=11):
+def bootstrap_pagination(
+    context,
+    page,
+    pages_to_show=11,
+    url=None,
+    size=None,
+    parameter_name='page',
+):
     first = max(1, page.number - pages_to_show // 2)
     last = min(page.paginator.num_pages, first + pages_to_show)
     first = max(1, last - pages_to_show)
@@ -77,5 +94,7 @@ def bootstrap_pagination(context, page, pages_to_show=11):
         'pages_shown': range(first, last + 1),
         'has_previous': first > 1,
         'has_next': last < page.paginator.num_pages,
-        'url': context['request'].get_full_path(),
+        'url': url or context['request'].get_full_path(),
+        'size': size,
+        'parameter_name': parameter_name,
     }

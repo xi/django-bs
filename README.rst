@@ -27,9 +27,9 @@ is required so that widget templates can be overwritten::
 
    INSTALLED_APPS = [
        …
-       'django-bs4'
+       'django-bs4',
        …
-       'django.forms'
+       'django.forms',
        …
    ]
 

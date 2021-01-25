@@ -60,7 +60,7 @@ Differences to django-bootstrap4
    templates.
 -  Concentrates on forms fields and does therefore not include some
    others features.
--  Uses ``small.text-danger`` instead of ``.invalid-feedback`` as it
+-  Uses ``.form-text.text-danger`` instead of ``.invalid-feedback`` as it
    does not depend on DOM location. (see also `twbs/bootstrap#29439`_)
 -  Does not use ``.is-valid`` because I find it confusing with
    server-side rendering.

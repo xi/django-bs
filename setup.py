@@ -5,7 +5,7 @@ setup(
     name='django-bs5',
     description='simple bootstrap5 support for django',
     long_description=open('README.rst').read(),
-    version='4.0.0',
+    version='5.0.0b1-1',
     license='MIT',
     packages=find_packages(),
     include_package_data=True,

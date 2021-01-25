@@ -1,3 +1,10 @@
+5.0.0 (unreleased)
+------------------
+
+-	adapt to bootstrap 5
+-	change package name to django-bs5 and tag library name to bootstrap5
+
+
 4.0.0 (unreleased)
 ------------------
 

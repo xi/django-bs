@@ -1,3 +1,12 @@
+0.0.4 (2021-01-25)
+------------------
+
+-	clearable file input
+	-	fix line break
+	-	fix disable checkbox when disabled (django #31536)
+	-	fix use bootstrap styling
+
+
 0.0.3 (2020-06-17)
 ------------------
 

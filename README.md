@@ -18,6 +18,7 @@ Installation
 Install with pip:
 
     pip install 'django-bs==4.*'  # for bootstrap 4
+    pip install 'django-bs==5.*'  # for bootstrap 5
 
 After that you have to add it to `INSTALLED_APPS`. You also need to make sure
 that the correct `FORM_RENDERER` is selected and `django.forms` is in

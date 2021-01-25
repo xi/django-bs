@@ -1,6 +1,6 @@
-<fieldset class="form-row">
+<fieldset class="row g-3">
     {% for widget in widget.subwidgets %}
-        <div class="col-sm {% if not forloop.last %}mb-2 mb-sm-0{% endif %}">
+        <div class="col-sm">
             {% include widget.template_name %}
         </div>
     {% endfor %}

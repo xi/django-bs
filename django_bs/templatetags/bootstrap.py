@@ -48,7 +48,7 @@ def bootstrap_field(
     addon_before=None,
     addon_after=None,
     show_label=True,
-    form_group_class='form-group',
+    form_group_class='mb-3',
 ):
     widget = boundfield.field.widget
     is_check = getattr(widget, 'input_type', None) in ['checkbox', 'radio']

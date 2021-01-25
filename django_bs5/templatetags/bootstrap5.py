@@ -42,7 +42,7 @@ def bootstrap_url_replace_param(url, key, value):
     ])
 
 
-@register.inclusion_tag('bs4/field.html')
+@register.inclusion_tag('bs5/field.html')
 def bootstrap_field(
     boundfield,
     addon_before=None,
@@ -64,19 +64,19 @@ def bootstrap_field(
     }
 
 
-@register.inclusion_tag('bs4/form.html')
+@register.inclusion_tag('bs5/form.html')
 def bootstrap_form(form):
     return {
         'form': form,
     }
 
 
-@register.inclusion_tag('bs4/messages.html', takes_context=True)
+@register.inclusion_tag('bs5/messages.html', takes_context=True)
 def bootstrap_messages(context):
     return context
 
 
-@register.inclusion_tag('bs4/pagination.html', takes_context=True)
+@register.inclusion_tag('bs5/pagination.html', takes_context=True)
 def bootstrap_pagination(
     context,
     page,

@@ -2,8 +2,8 @@ from setuptools import find_packages, setup
 
 
 setup(
-    name='django-bs4',
-    description='simple bootstrap4 support for django',
+    name='django-bs5',
+    description='simple bootstrap5 support for django',
     long_description=open('README.rst').read(),
     version='4.0.0',
     license='MIT',

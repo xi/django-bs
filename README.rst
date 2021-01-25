@@ -1,7 +1,7 @@
-Bootstrap 4 forms for Django
+Bootstrap 5 forms for Django
 ============================
 
-Bootstrap 4 integration for django using `widget templates`_ that were
+Bootstrap 5 integration for django using `widget templates`_ that were
 introduced in Django 1.11.
 
 Motivation
@@ -18,16 +18,16 @@ Installation
 
 Install with pip::
 
-   pip install django-bs4
+   pip install django-bs5
 
 After that you have to add it to ``INSTALLED_APPS``. You also need to
 make sure that the correct ``FORM_RENDERER`` is selected and
-``django.forms`` is in ``INSTALLED_APPS`` (after ``django_bs4``). This
+``django.forms`` is in ``INSTALLED_APPS`` (after ``django_bs5``). This
 is required so that widget templates can be overwritten::
 
    INSTALLED_APPS = [
        …
-       'django_bs4',
+       'django_bs5',
        …
        'django.forms',
        …

@@ -9,7 +9,7 @@ setup(
     url='https://github.com/xi/django-bs',
     author='Tobias Bengfort',
     author_email='tobias.bengfort@posteo.de',
-    version='0.0.4',
+    version='4.0.0',
     license='MIT',
     packages=find_packages(),
     include_package_data=True,

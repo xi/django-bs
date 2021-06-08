@@ -51,12 +51,12 @@ def bootstrap_field(
     form_group_class='form-group',
 ):
     widget = boundfield.field.widget
+    is_check = getattr(widget, 'input_type', None) in ['checkbox', 'radio']
+    has_options = getattr(widget, 'option_template_name', None)
     return {
         'field': boundfield,
-        'check': (
-            getattr(widget, 'input_type', None) in ['checkbox', 'radio']
-            and not getattr(widget, 'option_template_name', None)
-        ),
+        'check': is_check and not has_options,
+        'fieldset': is_check and has_options,
         'addon_before': addon_before,
         'addon_after': addon_after,
         'show_label': show_label,

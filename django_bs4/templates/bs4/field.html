@@ -1,4 +1,4 @@
-<div class="{{ form_group_class }} {% if check %}form-check{% endif %}">
+<{{ fieldset|yesno:'fieldset,div' }} class="{{ form_group_class }} {% if check %}form-check{% endif %}">
     {% if check %}
         {{ field }}
         {% if show_label %}
@@ -6,7 +6,11 @@
         {% endif %}
     {% else %}
         {% if show_label %}
-            <label {% ifequal show_label 'sr-only' %}class="sr-only"{% endifequal %} for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {% if fieldset %}
+                <legend class="h6 {% ifequal show_label 'sr-only' %}sr-only{% endifequal %}">{{ field.label }}</legend>
+            {% else %}
+                <label {% ifequal show_label 'sr-only' %}class="sr-only"{% endifequal %} for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {% endif %}
         {% endif %}
         {% if addon_before or addon_after %}
             <div class="input-group">
@@ -32,4 +36,4 @@
     {% for error in field.errors %}
         <small class="form-text text-danger">{{ error }}</small>
     {% endfor %}
-</div>
+</{{ fieldset|yesno:'fieldset,div' }}>

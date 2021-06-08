@@ -22,12 +22,12 @@ Install with pip::
 
 After that you have to add it to ``INSTALLED_APPS``. You also need to
 make sure that the correct ``FORM_RENDERER`` is selected and
-``django.forms`` is in ``INSTALLED_APPS`` (after ``django-bs4``). This
+``django.forms`` is in ``INSTALLED_APPS`` (after ``django_bs4``). This
 is required so that widget templates can be overwritten::
 
    INSTALLED_APPS = [
        …
-       'django-bs4',
+       'django_bs4',
        …
        'django.forms',
        …

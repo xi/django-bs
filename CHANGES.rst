@@ -1,3 +1,12 @@
+4.0.0 (unreleased)
+------------------
+
+-	use underscore in app name
+-	help text and error inside form-check
+-	use fieldsets where appropriate (django #32338)
+-	change versioning to align with bootstrap
+
+
 0.0.4 (2021-01-25)
 ------------------
 

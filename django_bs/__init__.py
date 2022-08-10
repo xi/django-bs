@@ -23,4 +23,4 @@ def patched(self, *args, **kwargs):
 
 
 setattr(BoundField, 'as_widget', patched)
-logger.debug('BoundField.as_widget() has been patched by django-bs4.')
+logger.debug('BoundField.as_widget() has been patched by django-bs.')

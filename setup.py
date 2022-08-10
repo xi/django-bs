@@ -2,8 +2,8 @@ from setuptools import find_packages, setup
 
 
 setup(
-    name='django-bs4',
-    description='simple bootstrap4 support for django',
+    name='django-bs',
+    description='simple bootstrap support for django',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/xi/django-bs',

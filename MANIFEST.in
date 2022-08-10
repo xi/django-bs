@@ -1,1 +1,1 @@
-recursive-include django_bs4/templates *.html
+recursive-include django_bs/templates *.html

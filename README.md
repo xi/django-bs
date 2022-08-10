@@ -1,7 +1,7 @@
-Bootstrap 4 forms for Django
-============================
+Bootstrap forms for Django
+==========================
 
-Bootstrap 4 integration for django using [widget templates] that were
+Bootstrap integration for django using [widget templates] that were
 introduced in Django 1.11.
 
 Motivation
@@ -17,7 +17,7 @@ Installation
 
 Install with pip:
 
-    pip install django-bs4
+    pip install 'django-bs==4.*'  # for bootstrap 4
 
 After that you have to add it to `INSTALLED_APPS`. You also need to make sure
 that the correct `FORM_RENDERER` is selected and `django.forms` is in
@@ -26,7 +26,7 @@ templates can be overwritten:
 
     INSTALLED_APPS = [
         …
-        'django_bs4',
+        'django_bs',
         …
         'django.forms',
         …
@@ -37,7 +37,7 @@ templates can be overwritten:
 Usage
 -----
 
-The following template tags are included in the `bootstrap4` library:
+The following template tags are included in the `bootstrap` library:
 
 -   `bootstrap_field {boundfield}` - Render a single field.
 -   `bootstrap_form {form}` - Render errors and all fields for a form. The

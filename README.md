@@ -7,7 +7,7 @@ introduced in Django 1.11.
 Motivation
 ----------
 
-This library is meant to be a drop-in replacement for [django-bootstrap4]. See
+This library is meant to be a drop-in replacement for [django-bootstrap5]. See
 below for a list of differences. I really like that library, but it is hard to
 customize some things because everything is done in python functions. By using
 widget templates, I hope this library is more flexible.
@@ -49,7 +49,7 @@ The following template tags are included in the `bootstrap` library:
 
 Please refer to the source code for additional parameters.
 
-Differences to django-bootstrap4
+Differences to django-bootstrap5
 --------------------------------
 
 -   Uses widget templates instead of custom renderers. IMHO this makes the code
@@ -71,5 +71,5 @@ Differences to django-bootstrap4
 -   No configuration.
 
 [widget templates]: https://docs.djangoproject.com/en/stable/ref/forms/renderers/#overriding-built-in-widget-templates
-[django-bootstrap4]: https://github.com/zostera/django-bootstrap4
+[django-bootstrap5]: https://github.com/zostera/django-bootstrap5
 [twbs/bootstrap\#29439]: https://github.com/twbs/bootstrap/issues/29439

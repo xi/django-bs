@@ -56,7 +56,7 @@ def bootstrap_field(
     return {
         'field': boundfield,
         'check': is_check and not has_options,
-        'fieldset': is_check and has_options,
+        'fieldset': getattr(widget, 'use_fieldset', is_check and has_options),
         'addon_before': addon_before,
         'addon_after': addon_after,
         'show_label': show_label,

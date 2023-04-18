@@ -1,8 +1,7 @@
 Bootstrap forms for Django
 ==========================
 
-Bootstrap integration for django using [widget templates] that were
-introduced in Django 1.11.
+Bootstrap integration for django using [widget templates].
 
 Motivation
 ----------

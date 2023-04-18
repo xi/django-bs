@@ -7,7 +7,7 @@
     {% else %}
         {% if show_label %}
             {% if fieldset %}
-                <legend class="form-label {% if show_label == 'sr-only' %}visually-hidden{% endif %}">{{ field.label }}</legend>
+                <legend class="form-label fs-6 {% if show_label == 'sr-only' %}visually-hidden{% endif %}">{{ field.label }}</legend>
             {% else %}
                 <label class="form-label {% if show_label == 'sr-only' %}visually-hidden{% endif %}" for="{{ field.id_for_label }}">{{ field.label }}</label>
             {% endif %}

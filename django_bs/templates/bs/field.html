@@ -2,14 +2,14 @@
     {% if check %}
         {{ field }}
         {% if show_label %}
-            <label for="{{ field.id_for_label }}" class="form-check-label {% ifequal show_label 'sr-only' %}visually-hidden{% endifequal %}">{{ field.label }}</label>
+            <label for="{{ field.id_for_label }}" class="form-check-label {% if show_label == 'sr-only' %}visually-hidden{% endif %}">{{ field.label }}</label>
         {% endif %}
     {% else %}
         {% if show_label %}
             {% if fieldset %}
-                <legend class="form-label {% ifequal show_label 'sr-only' %}visually-hidden{% endifequal %}">{{ field.label }}</legend>
+                <legend class="form-label {% if show_label == 'sr-only' %}visually-hidden{% endif %}">{{ field.label }}</legend>
             {% else %}
-                <label class="form-label {% ifequal show_label 'sr-only' %}visually-hidden{% endifequal %}" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                <label class="form-label {% if show_label == 'sr-only' %}visually-hidden{% endif %}" for="{{ field.id_for_label }}">{{ field.label }}</label>
             {% endif %}
         {% endif %}
         {% if addon_before or addon_after %}

@@ -55,6 +55,8 @@ Differences to django-bootstrap5
     much easier to read and customize. A big downside is that I had to
     monkey-patch `BoundField.as_widget()` to include some information that
     would otherwise not be available in the widget templates.
+-   Also overwrites the default form template in Django 4.0 and later so that
+    `{{ form }}` does the right thing automatically.
 -   Concentrates on forms fields and does therefore not include some others
     features.
 -   Uses `.form-text.text-danger` instead of `.invalid-feedback` as it does not

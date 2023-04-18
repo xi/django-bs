@@ -1,3 +1,15 @@
+5.1.0 (2023-04-18)
+------------------
+
+-   add support for Django 4.x
+-   fix rendering of hidden fields in `bootstrap_form`
+-   overwrite the default form template so that `{{ form }}` will produce the
+    same output as `{% bootstrap_form form %}` (starting with Django 4.0)
+-   starting with Django 4.0, make use of `widget.use_fieldset`
+-   use same font size for `<legend>` as for `<label>`
+-   work around extensive spacing between legend and multiwidget
+
+
 5.0.0 (unreleased)
 ------------------
 

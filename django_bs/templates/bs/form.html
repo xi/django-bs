@@ -5,5 +5,9 @@
 {% endfor %}
 
 {% for field in form %}
-    {% bootstrap_field field %}
+    {% if field.is_hidden %}
+        {{ field }}
+    {% else %}
+        {% bootstrap_field field %}
+    {% endif %}
 {% endfor %}

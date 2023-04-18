@@ -11,7 +11,7 @@ setup(
     author_email='tobias.bengfort@posteo.de',
     version='5.1.0',
     license='MIT',
-    packages=find_packages(),
+    packages=['django_bs'],
     include_package_data=True,
     classifiers=[
         'Intended Audience :: Developers',

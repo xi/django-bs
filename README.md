@@ -65,8 +65,7 @@ Differences to django-bootstrap5
     rendering.
 -   Does not include dismiss-buttons for alerts to avoid depending on
     JavaScript.
--   Does not include field errors at the top of forms as they are already
-    displayed on the fields themselves.
+-   Non-field errors are styled as alerts.
 -   Improved accessibility.
 -   You will have to load bootstrap yourself.
 -   No configuration.

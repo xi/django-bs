@@ -21,7 +21,7 @@ Install with pip:
 
 After that you have to add it to `INSTALLED_APPS`. You also need to make sure
 that the correct `FORM_RENDERER` is selected and `django.forms` is in
-`INSTALLED_APPS` (after `django_bs4`). This is required so that widget
+`INSTALLED_APPS` (after `django_bs`). This is required so that widget
 templates can be overwritten:
 
     INSTALLED_APPS = [
@@ -57,7 +57,7 @@ Differences to django-bootstrap5
     would otherwise not be available in the widget templates.
 -   Also overwrites the default form template in Django 4.0 and later so that
     `{{ form }}` does the right thing automatically.
--   Concentrates on forms fields and does therefore not include some others
+-   Concentrates on forms fields and does therefore not include some other
     features.
 -   Uses `.form-text.text-danger` instead of `.invalid-feedback` as it does not
     depend on DOM location. (see also [twbs/bootstrap\#29439])
@@ -67,7 +67,7 @@ Differences to django-bootstrap5
     JavaScript.
 -   Does not include field errors at the top of forms as they are already
     displayed on the fields themselves.
--   Improved ARIA support.
+-   Improved accessibility.
 -   You will have to load bootstrap yourself.
 -   No configuration.
 

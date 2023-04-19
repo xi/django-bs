@@ -28,3 +28,8 @@ class ExampleForm(forms.Form):
     )
     date = forms.DateField(widget=forms.SelectDateWidget())
     date_time = forms.SplitDateTimeField()
+
+    def clean(self):
+        cleaned_data = super().clean()
+        self.add_error(None, 'This is a non-field error')
+        return cleaned_data

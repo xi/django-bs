@@ -12,7 +12,7 @@ from django.forms.boundfield import BoundField
 
 logger = logging.getLogger(__name__)
 
-original = getattr(BoundField, 'as_widget')
+original = BoundField.as_widget
 
 
 def patched(self, *args, **kwargs):
@@ -22,5 +22,5 @@ def patched(self, *args, **kwargs):
     return html
 
 
-setattr(BoundField, 'as_widget', patched)
+BoundField.as_widget = patched
 logger.debug('BoundField.as_widget() has been patched by django-bs.')

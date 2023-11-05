@@ -1,4 +1,7 @@
-from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
+from urllib.parse import parse_qs
+from urllib.parse import urlencode
+from urllib.parse import urlparse
+from urllib.parse import urlunparse
 
 from django import template
 from django.contrib.messages import constants as message_constants
@@ -45,6 +48,7 @@ def bootstrap_url_replace_param(url, key, value):
 @register.inclusion_tag('bs/field.html')
 def bootstrap_field(
     boundfield,
+    *,
     addon_before=None,
     addon_after=None,
     show_label=True,

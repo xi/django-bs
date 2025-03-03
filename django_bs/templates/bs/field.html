@@ -29,7 +29,11 @@
     {% if field.help_text %}
         <div class="form-text" id="{{ field.auto_id }}_helptext">{{ field.help_text }}</div>
     {% endif %}
-    {% for error in field.errors %}
-        <div class="form-text text-danger">{{ error }}</div>
-    {% endfor %}
+    {% if field.errors %}
+        <div id="{{ field.auto_id }}_error">
+            {% for error in field.errors %}
+                <div class="form-text text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
 </{{ fieldset|yesno:'fieldset,div' }}>

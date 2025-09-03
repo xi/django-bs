@@ -20,8 +20,8 @@ classifiers = [
 [project.urls]
 Homepage = "https://github.com/xi/django-bs"
 
-[tool.setuptools]
-packages = ["django_bs"]
+[tool.setuptools.packages.find]
+include = ["django_bs*"]
 
 [tool.setuptools.package-data]
 django_bs = [

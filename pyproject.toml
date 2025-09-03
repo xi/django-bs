@@ -7,13 +7,12 @@ name = "django-bs"
 version = "5.2.0"
 description = "simple bootstrap support for django"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 authors = [
     {name = "Tobias Bengfort", email = "tobias.bengfort@posteo.de"},
 ]
 classifiers = [
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Environment :: Web Environment",
     "Framework :: Django",
 ]

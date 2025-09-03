@@ -57,7 +57,7 @@ Differences to django-bootstrap5
     would otherwise not be available in the widget templates.
 -   Also overwrites the default form template in Django 4.0 and later so that
     `{{ form }}` does the right thing automatically.
--   Concentrates on forms fields and does therefore not include some other
+-   Concentrates on form fields and does therefore not include some other
     features.
 -   Uses `.form-text.text-danger` instead of `.invalid-feedback` as it does not
     depend on DOM location. (see also [twbs/bootstrap\#29439])

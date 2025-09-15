@@ -28,6 +28,7 @@ class ExampleForm(forms.Form):
     )
     date = forms.DateField(widget=forms.SelectDateWidget())
     date_time = forms.SplitDateTimeField()
+    required_css_class = 'required'
 
     def clean(self):
         cleaned_data = super().clean()

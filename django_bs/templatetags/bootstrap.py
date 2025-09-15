@@ -57,13 +57,18 @@ def bootstrap_field(
     widget = boundfield.field.widget
     is_check = getattr(widget, 'input_type', None) in ['checkbox', 'radio']
     has_options = getattr(widget, 'option_template_name', None)
+    label_classes = set()
+    if not show_label:
+        label_classes.add('visually-hidden')
+    if boundfield.field.required:
+        label_classes.add(getattr(boundfield.form, 'required_css_class', ''))
     return {
         'field': boundfield,
         'check': is_check and not has_options,
         'fieldset': getattr(widget, 'use_fieldset', is_check and has_options),
         'addon_before': addon_before,
         'addon_after': addon_after,
-        'show_label': show_label,
+        'label_classes': ' '.join(label_classes),
         'form_group_class': form_group_class,
     }
 

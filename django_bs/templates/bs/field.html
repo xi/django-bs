@@ -1,12 +1,12 @@
 <{{ fieldset|yesno:'fieldset,div' }} class="{{ form_group_class }} {% if check %}form-check{% endif %}">
     {% if check %}
         {{ field }}
-        <label for="{{ field.id_for_label }}" class="form-check-label {% if field.field.required %}{{ field.form.required_css_class }}{% endif %} {% if not show_label %}visually-hidden{% endif %}">{{ field.label }}</label>
+        <label for="{{ field.id_for_label }}" class="form-check-label {{ label_classes }}">{{ field.label }}</label>
     {% else %}
         {% if fieldset %}
-            <legend class="form-label fs-6 {% if field.field.required %}{{ field.form.required_css_class }}{% endif %} {% if not show_label %}visually-hidden{% endif %}">{{ field.label }}</legend>
+            <legend class="form-label fs-6 {{ label_classes }}">{{ field.label }}</legend>
         {% else %}
-            <label class="form-label {% if field.field.required %}{{ field.form.required_css_class }}{% endif %} {% if not show_label %}visually-hidden{% endif %}" for="{{ field.id_for_label }}">{{ field.label }}</label>
+            <label class="form-label {{ label_classes }}" for="{{ field.id_for_label }}">{{ field.label }}</label>
         {% endif %}
         {% if addon_before or addon_after %}
             <div class="input-group">

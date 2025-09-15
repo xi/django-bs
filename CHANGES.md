@@ -1,3 +1,12 @@
+5.3.0 (2025-09-15)
+------------------
+
+-   support `form.required_css_class` (added to the label like in django, but
+    different from django-bootstrap5)
+-   breaking: it is no longer possible to skip a label completely
+-   fix: `show_label=False` create a visually hidden label
+
+
 5.2.1 (2025-09-03)
 ------------------
 

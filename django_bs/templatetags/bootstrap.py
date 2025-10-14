@@ -1,3 +1,4 @@
+import warnings
 from urllib.parse import parse_qs
 from urllib.parse import urlencode
 from urllib.parse import urlparse
@@ -52,7 +53,8 @@ def bootstrap_field(
     addon_before=None,
     addon_after=None,
     show_label=True,
-    form_group_class='mb-3',
+    wrapper_class='mb-3',
+    form_group_class=None,
 ):
     widget = boundfield.field.widget
     is_check = getattr(widget, 'input_type', None) in ['checkbox', 'radio']
@@ -62,6 +64,12 @@ def bootstrap_field(
         label_classes.add('visually-hidden')
     if boundfield.field.required:
         label_classes.add(getattr(boundfield.form, 'required_css_class', ''))
+    if form_group_class:
+        warnings.warn(
+            'form_group_class is deprecated. Use `wrapper_class` instead.',
+            DeprecationWarning,
+            stacklevel=2,
+        )
     return {
         'field': boundfield,
         'check': is_check and not has_options,
@@ -70,6 +78,7 @@ def bootstrap_field(
         'addon_after': addon_after,
         'label_classes': ' '.join(label_classes),
         'form_group_class': form_group_class,
+        'wrapper_class': form_group_class or wrapper_class,
     }
 
 

@@ -1,4 +1,4 @@
-<{{ fieldset|yesno:'fieldset,div' }} class="{{ form_group_class }} {% if check %}form-check{% endif %}">
+<{{ fieldset|yesno:'fieldset,div' }} class="{{ wrapper_class }} {% if check %}form-check{% endif %}">
     {% if check %}
         {{ field }}
         <label for="{{ field.id_for_label }}" class="form-check-label {{ label_classes }}">{{ field.label }}</label>

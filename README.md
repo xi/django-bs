@@ -61,6 +61,8 @@ Differences to django-bootstrap5
     features.
 -   Uses `.form-text.text-danger` instead of `.invalid-feedback` as it does not
     depend on DOM location. (see also [twbs/bootstrap\#29439])
+-   Uses [Django's `required_css_class`]
+    which is defined on the `Form` class and added to the `<label>`.
 -   Does not use `.is-valid` because I find it confusing with server-side
     rendering.
 -   Does not include dismiss-buttons for alerts to avoid depending on
@@ -73,3 +75,4 @@ Differences to django-bootstrap5
 [widget templates]: https://docs.djangoproject.com/en/stable/ref/forms/renderers/#overriding-built-in-widget-templates
 [django-bootstrap5]: https://github.com/zostera/django-bootstrap5
 [twbs/bootstrap\#29439]: https://github.com/twbs/bootstrap/issues/29439
+[Django's `required_css_class`]: https://docs.djangoproject.com/en/stable/ref/forms/api/#django.forms.Form.required_css_class

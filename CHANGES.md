@@ -1,3 +1,10 @@
+5.4.0 (2025-11-25)
+------------------
+
+-   rename `form_group_class` to `wrapper_class` to align with
+    django-bootstrap5. `form_group_class` is still supported, but deprecated.
+
+
 5.3.0 (2025-09-15)
 ------------------
 

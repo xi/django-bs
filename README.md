@@ -43,8 +43,8 @@ The following template tags are included in the `bootstrap` library:
 -   `bootstrap_form {form}` - Render errors and all fields for a form. The
     `<form>` element itself is not included.
 -   `bootstrap_messages` - Render messages from `django.contrib.messages`.
--   `bootstrap_pagination {page}` - Render pagination. A `<nav>` element is not
-    included.
+-   `bootstrap_pagination {page}` - Render pagination. You should wrap it in a
+    `<nav>` element with a meaningful `aria-label` yourself.
 
 Please refer to the source code for additional parameters.
 

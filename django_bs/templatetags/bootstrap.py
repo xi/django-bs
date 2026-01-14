@@ -94,6 +94,14 @@ def bootstrap_messages(context):
     return context
 
 
+@register.inclusion_tag('django/forms/widgets/attrs.html', takes_context=True)
+def bootstrap_attrs(context, **kwargs):
+    attrs = {**context['widget']['attrs']}
+    for key, value in kwargs.items():
+        attrs[key] = f'{value} {attrs.get(key, "")}'.strip()
+    return {'widget': {'attrs': attrs}}
+
+
 @register.inclusion_tag('bs/pagination.html', takes_context=True)
 def bootstrap_pagination(
     context,

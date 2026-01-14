@@ -1,2 +1,3 @@
-<textarea name="{{ widget.name }}" class="form-control"{% include "django/forms/widgets/attrs.html" %}>
+{% load bootstrap %}
+<textarea name="{{ widget.name }}"{% bootstrap_attrs class="form-control" %}>
 {% if widget.value %}{{ widget.value }}{% endif %}</textarea>

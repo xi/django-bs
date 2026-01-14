@@ -1,4 +1,5 @@
-<select name="{{ widget.name }}" class="form-select"{% include "django/forms/widgets/attrs.html" %}>
+{% load bootstrap %}
+<select name="{{ widget.name }}"{% bootstrap_attrs class="form-select" %}>
     {% for group_name, group_choices, group_index in widget.optgroups %}
         {% if group_name %}
             <optgroup label="{{ group_name }}">

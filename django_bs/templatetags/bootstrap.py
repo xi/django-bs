@@ -8,11 +8,11 @@ from django import template
 from django.contrib.messages import constants as message_constants
 
 MESSAGE_LEVEL_CLASSES = {
-    message_constants.DEBUG: 'alert alert-warning',
-    message_constants.INFO: 'alert alert-info',
-    message_constants.SUCCESS: 'alert alert-success',
-    message_constants.WARNING: 'alert alert-warning',
-    message_constants.ERROR: 'alert alert-danger',
+    message_constants.DEBUG: 'alert theme-warning',
+    message_constants.INFO: 'alert theme-info',
+    message_constants.SUCCESS: 'alert theme-success',
+    message_constants.WARNING: 'alert theme-warning',
+    message_constants.ERROR: 'alert theme-danger',
 }
 
 register = template.Library()
@@ -53,7 +53,7 @@ def bootstrap_field(
     addon_before=None,
     addon_after=None,
     show_label=True,
-    wrapper_class='mb-3',
+    wrapper_class='form-field mb-5',
     form_group_class=None,
 ):
     widget = boundfield.field.widget

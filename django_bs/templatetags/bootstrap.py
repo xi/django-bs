@@ -8,11 +8,11 @@ from django import template
 from django.contrib.messages import constants as message_constants
 
 MESSAGE_LEVEL_CLASSES = {
-    message_constants.DEBUG: 'alert alert-warning',
-    message_constants.INFO: 'alert alert-info',
-    message_constants.SUCCESS: 'alert alert-success',
-    message_constants.WARNING: 'alert alert-warning',
-    message_constants.ERROR: 'alert alert-danger',
+    message_constants.DEBUG: 'alert theme-warning',
+    message_constants.INFO: 'alert theme-info',
+    message_constants.SUCCESS: 'alert theme-success',
+    message_constants.WARNING: 'alert theme-warning',
+    message_constants.ERROR: 'alert theme-danger',
 }
 
 register = template.Library()

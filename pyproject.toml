@@ -27,3 +27,9 @@ include = ["django_bs*"]
 django_bs = [
     "templates/**/*.html",
 ]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+
+[tool.ruff.lint.isort]
+force-single-line = true

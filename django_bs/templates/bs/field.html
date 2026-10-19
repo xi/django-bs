@@ -4,7 +4,7 @@
         <label for="{{ field.id_for_label }}" class="form-check-label {{ label_classes }}">{{ field.label }}</label>
     {% else %}
         {% if fieldset %}
-            <legend class="form-label fs-6 {{ label_classes }}">{{ field.label }}</legend>
+            <legend class="form-label fs-md {{ label_classes }}">{{ field.label }}</legend>
         {% else %}
             <label class="form-label {{ label_classes }}" for="{{ field.id_for_label }}">{{ field.label }}</label>
         {% endif %}

@@ -53,7 +53,7 @@ def bootstrap_field(
     addon_before=None,
     addon_after=None,
     show_label=True,
-    wrapper_class='mb-5',
+    wrapper_class='form-field mb-5',
     form_group_class=None,
 ):
     widget = boundfield.field.widget

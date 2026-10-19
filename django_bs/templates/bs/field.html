@@ -28,7 +28,7 @@
     {% if field.errors %}
         <div id="{{ field.auto_id }}_error">
             {% for error in field.errors %}
-                <div class="form-text text-danger">{{ error }}</div>
+                <div class="invalid-feedback d-block">{{ error }}</div>
             {% endfor %}
         </div>
     {% endif %}

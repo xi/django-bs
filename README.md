@@ -59,8 +59,6 @@ Differences to django-bootstrap5
     `{{ form }}` does the right thing automatically.
 -   Concentrates on form fields and does therefore not include some other
     features.
--   Uses `.form-text.text-danger` instead of `.invalid-feedback` as it does not
-    depend on DOM location. (see also [twbs/bootstrap\#29439])
 -   Uses [Django's `required_css_class`]
     which is defined on the `Form` class and added to the `<label>`.
 -   Does not use `.is-valid` because I find it confusing with server-side
